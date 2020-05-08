@@ -12,10 +12,11 @@ from optparse import OptionParser
 class SimpleEcho(WebSocket):
 
    def handleMessage(self):
+      print(f"{self.data}")
       self.sendMessage(self.data)
 
    def handleConnected(self):
-      pass
+      print("Connected")
 
    def handleClose(self):
       pass
